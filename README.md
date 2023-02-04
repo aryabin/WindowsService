@@ -21,6 +21,10 @@ public class CustomAddIn : IWinServiceAddIn
 }
 ```
 4. Add your business logic to your addIn
+5. Put your dll to directory where WinService is located
+6. Restart WinService
+
+> You can use project SampleAddIn as a sample
 
 ## Use prepared workers
 You can use one of prepared workers for your addIn.
