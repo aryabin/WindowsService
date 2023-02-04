@@ -16,31 +16,32 @@ namespace SampleAddIn
 
         public void OnStart(CancellationToken cancellationToken)
         {
+            Console.WriteLine($"AddIn {Name} - OnStart");
             _worker = new PeriodicWorker(() =>
             {
-                Console.WriteLine("DoWork");
+                Console.WriteLine($"AddIn {Name} - DoWork");
             }, cancellationToken);
             _worker.DoWork();
         }
 
         public void OnStop()
         {
-
+            Console.WriteLine($"AddIn {Name} - OnStop");
         }
 
         public void OnContinue()
         {
-
+            Console.WriteLine($"AddIn {Name} - OnContinue");
         }
 
         public void OnPause()
         {
-
+            Console.WriteLine($"AddIn {Name} - OnPause");
         }
 
         public void OnShutdown()
         {
-
+            Console.WriteLine($"AddIn {Name} - OnShutdown");
         }
     }
 }

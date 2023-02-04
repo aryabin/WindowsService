@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.winServiceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
-            this.winServiceInstaller = new System.ServiceProcess.ServiceInstaller();
+            this._winServiceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
+            this._winServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
-            // winServiceProcessInstaller
+            // _winServiceProcessInstaller
             // 
-            this.winServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
-            this.winServiceProcessInstaller.Password = null;
-            this.winServiceProcessInstaller.Username = null;
+            this._winServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
+            this._winServiceProcessInstaller.Password = null;
+            this._winServiceProcessInstaller.Username = null;
             // 
-            // winServiceInstaller
+            // _winServiceInstaller
             // 
-            this.winServiceInstaller.Description = "Extendable Windows Service";
-            this.winServiceInstaller.DisplayName = "Extendable Windows Service";
-            this.winServiceInstaller.ServiceName = "Extendable Windows Service";
-            this.winServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this._winServiceInstaller.Description = "Extendable Windows Service";
+            this._winServiceInstaller.DisplayName = "Extendable Windows Service";
+            this._winServiceInstaller.ServiceName = "Extendable Windows Service";
+            this._winServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.winServiceProcessInstaller,
-            this.winServiceInstaller});
+            this._winServiceProcessInstaller,
+            this._winServiceInstaller});
 
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller winServiceProcessInstaller;
-        private System.ServiceProcess.ServiceInstaller winServiceInstaller;
+        private System.ServiceProcess.ServiceProcessInstaller _winServiceProcessInstaller;
+        private System.ServiceProcess.ServiceInstaller _winServiceInstaller;
     }
 }

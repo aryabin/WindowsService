@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SampleAddIn")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Sample AddIn for Extendable Windows Service")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("aryabin")]
 [assembly: AssemblyProduct("SampleAddIn")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]

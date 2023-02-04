@@ -19,8 +19,6 @@ namespace WinService
 
         public WinService()
         {
-            _cancellationTokenSource = new CancellationTokenSource();
-
             InitializeComponent();
             InitializeAddIns();
         }
@@ -43,6 +41,7 @@ namespace WinService
 
         protected override void OnStart(string[] args)
         {
+            _cancellationTokenSource = new CancellationTokenSource();
             Parallel.ForEach(_addIns.Where(a => a.Capabilities.HasFlag(Capabilities.CanStart)), a => a.OnStart(_cancellationTokenSource.Token));
         }
 
