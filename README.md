@@ -9,7 +9,7 @@ You are able to debug this windows service like any console application. You nee
 ## How to extend
 
 1. Create new Class Library project
-2. Add reference to WinService.Common
+2. Add reference to WinService.Common one of the following ways
    - Add reference to project WinService.Common
    - Add reference to WinService.Common.dll
 3. Implement interface IWinServiceAddIn and add ExportAttribute
