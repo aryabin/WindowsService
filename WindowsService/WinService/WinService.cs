@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using System.ComponentModel.Composition.Hosting;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.ServiceProcess;
@@ -13,30 +10,15 @@ namespace WinService
 {
     public partial class WinService : ServiceBase
     {
-        [ImportMany]
         private IEnumerable<IWinServiceAddIn> _addIns;
         private CancellationTokenSource _cancellationTokenSource;
 
         public WinService()
         {
             InitializeComponent();
-            InitializeAddIns();
-        }
-
-        private void InitializeAddIns()
-        {
-            var catalog = new DirectoryCatalog(Constants.CURRENT_DIRECTORY, Constants.ALL_CLASS_LIBRARIES);
-            var container = new CompositionContainer(catalog);
-
-            try
-            {
-                container.ComposeParts(this);
-            }
-            catch (ChangeRejectedException ex)
-            {
-                Console.WriteLine(ex.Message);
-                return;
-            }
+            AddInLoader addInLoader = new AddInLoader();
+            addInLoader.LoadData();
+            _addIns = addInLoader.GetLoadedData();
         }
 
         protected override void OnStart(string[] args)

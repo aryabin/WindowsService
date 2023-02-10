@@ -2,7 +2,7 @@
 {
     internal static class Constants
     {
-        public static readonly string CURRENT_DIRECTORY = ".";
-        public static readonly string ALL_CLASS_LIBRARIES = "*.dll";
+        public const string CURRENT_DIRECTORY = ".";
+        public const string ALL_CLASS_LIBRARIES = "*.dll";
     }
 }
