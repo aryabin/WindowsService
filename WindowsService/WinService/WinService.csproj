@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="AddInLoader.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="ILoader.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -91,9 +92,7 @@
       <Name>WinService.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Settings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>

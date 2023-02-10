@@ -18,7 +18,7 @@ namespace WinService
 
         public void LoadData()
         {
-            var catalog = new DirectoryCatalog(Constants.CURRENT_DIRECTORY, Constants.ALL_CLASS_LIBRARIES);
+            var catalog = new DirectoryCatalog(Constants.CurrentDirectoryParam, Constants.AllClassLibrariesParam);
             var container = new CompositionContainer(catalog);
 
             try

@@ -16,7 +16,7 @@ namespace WinService
         public WinService()
         {
             InitializeComponent();
-            AddInLoader addInLoader = new AddInLoader();
+            var addInLoader = new AddInLoader();
             addInLoader.LoadData();
             _addIns = addInLoader.GetLoadedData();
         }

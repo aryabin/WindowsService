@@ -11,9 +11,9 @@ namespace WinService.Common
 
         public BaseWorker(Action action, CancellationToken cancellationToken, int delay)
         {
-            this._cancellationToken = cancellationToken;
-            this._action = action;
-            this._delay = delay;
+            _cancellationToken = cancellationToken;
+            _action = action;
+            _delay = delay;
         }
 
         public abstract void DoWork();
